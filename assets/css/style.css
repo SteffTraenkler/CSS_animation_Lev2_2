@@ -1,0 +1,46 @@
+body{
+    display: grid;
+    place-items: center;
+}
+
+section{
+    height: 80vh;
+    width: 60vw;
+    margin-top: 5%;
+    position: relative;
+    /* background-color: antiquewhite; */
+}
+div{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+    animation-name: run;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes run{
+    0%, 100%{
+        left:0;
+        top:0;
+    }
+    25%{
+        left:91%;
+        top:0;
+        background-color: yellow;
+    }
+    50%{
+        left:91%;
+        top:87%;
+        background-color: green;
+    }
+    75%{
+        left:0;
+        top:87%;
+        background-color: blue;
+    }
+}
+div:hover{
+    animation-play-state: paused;
+}
